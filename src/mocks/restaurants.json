@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Pasta Heaven",
+    "description": "A cozy Italian restaurant known for its authentic pasta dishes.",
+    "image": "/images/pasta-heaven.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Sushi World",
+    "description": "Offers a wide variety of fresh sushi and Japanese delicacies.",
+    "image": "/images/sushi-world.jpg"
+  },
+  {
+    "id": 3,
+    "name": "BBQ Delight",
+    "description": "A top-rated BBQ joint serving grilled meats and smoky flavors.",
+    "image": "/images/bbq-delight.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Vegan Bites",
+    "description": "A plant-based restaurant offering delicious and healthy vegan meals.",
+    "image": "/images/vegan-bites.jpg"
+  }
+]

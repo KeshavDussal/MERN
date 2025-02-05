@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Central Park",
+    "description:": "A vast green oasis in New York City, offering numerous recreational activities and scenic beauty.",
+    "image": "/images/central-park.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Statue of Liberty",
+    "description": "An iconic symbol of freedom, this colossal sculpture stands on Liberty Island.",
+    "image": "/images/statue-of-liberty.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Eiffel Tower",
+    "description": "A famous iron lattice tower in Paris, one of the most recognizable structures.",
+    "image": "/images/eiffel-tower.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Great Wall of China",
+    "description": "A historic series of walls and fortifications spanning across northern China.",
+    "image": "/images/great-wall-of-china.jpg"
+  }
+]
