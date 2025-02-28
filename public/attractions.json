@@ -2,14 +2,14 @@
   {
     "id": 1,
     "name": "Central Park",
-    "description:": "A vast green oasis in New York City, offering numerous recreational activities and scenic beauty.",
+    "description": "A vast green oasis in New York City, offering numerous recreational activities and scenic beauty.",
     "image": "/images/central-park.jpg"
   },
   {
     "id": 2,
     "name": "Statue of Liberty",
     "description": "An iconic symbol of freedom, this colossal sculpture stands on Liberty Island.",
-    "image": "/images/statue-of-liberty.jpg"
+    "image": "/images/great-wall-of-china.jpg"
   },
   {
     "id": 3,
