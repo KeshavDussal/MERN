@@ -36,3 +36,13 @@ exports.searchVisitors = async (req, res) => {
         res.status(400).json({ message: error.message });
     }
 };
+
+exports.getVisitorReports = async (req, res) => {
+    try {
+        const { from, to } = req.query;
+        const visitors = await visitorService.getVisitorReports(from, to);
+        res.status(200).json(visitors);
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+};

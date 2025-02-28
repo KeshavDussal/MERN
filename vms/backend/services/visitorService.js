@@ -44,3 +44,17 @@ exports.searchVisitors = async (query) => {
 
     return visitors;
 };
+
+exports.getVisitorReports = async (from, to) => {
+    if (!from || !to) throw new Error("Both 'from' and 'to' dates are required");
+
+    const startDate = new Date(from);
+    const endDate = new Date(to);
+    endDate.setHours(23, 59, 59, 999); // Ensure the entire end day is included
+
+    const visitors = await Visitor.find({
+        createdAt: { $gte: startDate, $lte: endDate }
+    }).populate("department", "name"); // Populate department name
+
+    return visitors;
+};
