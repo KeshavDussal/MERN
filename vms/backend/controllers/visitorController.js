@@ -26,3 +26,13 @@ exports.updateVisitorCheckout = async (req, res) => {
         res.status(400).json({ message: error.message });
     }
 };
+
+exports.searchVisitors = async (req, res) => {
+    try {
+        const { query } = req.query;
+        const visitors = await visitorService.searchVisitors(query);
+        res.status(200).json(visitors);
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+};
