@@ -11,3 +11,17 @@ exports.createDepartment = async ({ name }) => {
 
     return { message: "Department created successfully", department };
 };
+
+exports.getAllDepartments = async () => {
+    const departments = await Department.find();
+    return departments;
+};
+
+exports.deleteDepartment = async (id) => {
+    const department = await Department.findById(id);
+    if (!department) throw new Error("Department not found");
+
+    await Department.findByIdAndDelete(id);
+
+    return { message: "Department deleted successfully" };
+};
