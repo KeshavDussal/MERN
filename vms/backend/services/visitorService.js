@@ -14,3 +14,7 @@ exports.createVisitor = async ({ name, phone, department, purpose }) => {
 
     return { message: "Visitor added successfully", visitor };
 };
+
+exports.getAllVisitors = async () => {
+    return await Visitor.find().populate("department", "name"); // Populate department name
+};
