@@ -18,3 +18,12 @@ exports.getAllDepartments = async (req, res) => {
     }
 };
 
+exports.deleteDepartment = async (req, res) => {
+    try {
+        const response = await departmentService.deleteDepartment(req.params.id);
+        res.status(200).json(response);
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+};
+

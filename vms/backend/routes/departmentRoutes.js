@@ -5,5 +5,6 @@ const { authenticate } = require("../middleware/authMiddleware");
 
 router.post("/", authenticate, departmentController.createDepartment);
 router.get("/", authenticate, departmentController.getAllDepartments);
+router.delete("/:id", authenticate, departmentController.deleteDepartment);
 
 module.exports = router;
