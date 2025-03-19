@@ -20,3 +20,16 @@ exports.getAllVisitors = async () => {
     const visitors = await Visitor.find();
     return visitors;
 };
+
+exports.updateVisitorCheckout = async (id) => {
+    const visitor = await Visitor.findById(id);
+    if (!visitor) throw new Error("Visitor not found");
+
+    if (visitor.status === "Out") throw new Error("Visitor has already checked out");
+
+    visitor.checkOutTime = new Date();
+    visitor.status = "Out";
+    await visitor.save();
+
+    return { message: "Visitor checked out successfully", visitor };
+};

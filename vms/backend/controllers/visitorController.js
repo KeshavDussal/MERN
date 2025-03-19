@@ -17,3 +17,12 @@ exports.getAllVisitors = async (req, res) => {
         res.status(400).json({ message: error.message });
     }
 };
+
+exports.updateVisitorCheckout = async (req, res) => {
+    try {
+        const response = await visitorService.updateVisitorCheckout(req.params.id);
+        res.status(200).json(response);
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+};
