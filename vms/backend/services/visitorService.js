@@ -33,3 +33,16 @@ exports.updateVisitorCheckout = async (id) => {
 
     return { message: "Visitor checked out successfully", visitor };
 };
+
+exports.searchVisitors = async (query) => {
+    if (!query) throw new Error("Search query is required");
+
+    const visitors = await Visitor.find({
+        $or: [
+            { name: { $regex: query, $options: "i" } }, // Case-insensitive name search
+            { phone: { $regex: query } } // Case-insensitive phone search
+        ]
+    }).populate("department", "name"); // Populate department name
+
+    return visitors;
+};
