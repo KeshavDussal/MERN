@@ -10,6 +10,9 @@ router.put("/:id", authenticate, visitorController.updateVisitorCheckout);
 // Search visitors (Protected)
 router.get("/search", authenticate, visitorController.searchVisitors);
 
+// Generate visitor reports (Protected)
+router.get("/reports", authenticate, visitorController.getVisitorReports);
+
 
 
 module.exports = router;
