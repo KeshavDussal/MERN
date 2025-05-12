@@ -31,6 +31,7 @@ const Visitors = () => {
   const [open, setOpen] = useState(false);
   const [newVisitor, setNewVisitor] = useState({
     name: "",
+    age: "",
     phone: "",
     department: "",
     purpose: "",
@@ -199,6 +200,16 @@ const Visitors = () => {
               value={newVisitor.name}
               onChange={(e) =>
                 setNewVisitor({ ...newVisitor, name: e.target.value })
+              }
+            />
+            <TextField
+              label="Age"
+              type="number"
+              fullWidth
+              sx={{ mt: 2 }}
+              value={newVisitor.age}
+              onChange={(e) =>
+                setNewVisitor({ ...newVisitor, age: e.target.value })
               }
             />
             <TextField
