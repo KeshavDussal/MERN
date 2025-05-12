@@ -17,8 +17,7 @@ exports.createVisitor = async ({ name, phone, age, department, purpose }) => {
 };
 
 exports.getAllVisitors = async () => {
-    const visitors = await Visitor.find();
-    return visitors;
+    return await Visitor.find().populate("department", "name"); // Populate department name
 };
 
 exports.updateVisitorCheckout = async (id) => {
@@ -54,11 +53,9 @@ exports.getVisitorReports = async (from, to) => {
     const endDate = new Date(to);
     endDate.setHours(23, 59, 59, 999); // Ensure the entire end day is included
 
-    let visitors = await Visitor.find({
+    const visitors = await Visitor.find({
         createdAt: { $gte: startDate, $lte: endDate }
     }).populate("department", "name"); // Populate department name
-    if (visitors.length === 0) {
-        visitors = "No records found";
-    }
+
     return visitors;
 };
